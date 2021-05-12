@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace OSBB.Security
+namespace CCL.Security
 {
     public static class SecurityContext
     {
