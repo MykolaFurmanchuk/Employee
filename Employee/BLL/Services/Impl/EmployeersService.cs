@@ -1,15 +1,12 @@
-﻿using BLL.Services.Interfaces;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using DAL.Entities;
+﻿using AutoMapper;
+using BLL.DTO;
 using BLL.Services.Interfaces;
-using DAL.Repositories.Interfaces;
-using AutoMapper;
-using DAL.UnitOfWork;
 using CCL.Security;
 using CCL.Security.Identity;
-using BLL.DTO;
+using DAL.Entities;
+using DAL.UnitOfWork;
+using System;
+using System.Collections.Generic;
 
 
 namespace BLL.Services.Impl
@@ -35,7 +32,7 @@ namespace BLL.Services.Impl
         {
             var user = SecurityContext.GetUser();
             var userType = user.GetType();
-            if (userType != typeof(Admin)
+            if (userType == typeof(Admin)
                 && userType != typeof(Accountant))
             {
                 throw new MethodAccessException();
@@ -44,7 +41,7 @@ namespace BLL.Services.Impl
             var employeersEntities =
                 _database
                     .employeers
-                    .Find(z => z.EmployeeId == UserId, pageNumber, pageSize);
+                    .Find(z => z.EmployeersId == UserId, pageNumber, pageSize);
             var mapper =
                 new MapperConfiguration(
                     cfg => cfg.CreateMap<Employeers, EmployeersDTO>()
@@ -60,8 +57,8 @@ namespace BLL.Services.Impl
         {
             var user = SecurityContext.GetUser();
             var userType = user.GetType();
-            if (userType != typeof(Admin)
-                || userType != typeof(Accountant))
+            if (userType == typeof(Admin)
+                && userType == typeof(Accountant))
             {
                 throw new MethodAccessException();
             }

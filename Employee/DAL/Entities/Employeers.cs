@@ -4,7 +4,7 @@ namespace DAL.Entities
 {
     public class Employeers
     {
-        public int EmployeeId { get; set; }
+        public int EmployeersId { get; set; }
         public string Name { get; set; }
         public string Surname { get; set; }
 

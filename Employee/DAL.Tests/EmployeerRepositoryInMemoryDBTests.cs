@@ -39,7 +39,7 @@ namespace DAL.Tests
 
             Employeers employeer = new Employeers()
             {
-                EmployeeId = 5,
+                EmployeersId = 5,
                 Name = "test",
                 Surname = "testD",
                 //TrudBooks = new TrudBook() { TrudBookID = 5 }
@@ -65,7 +65,7 @@ namespace DAL.Tests
             Employeers employeer = new Employeers()
             {
                 //StreetId = 1,
-                EmployeeId = 5,
+                EmployeersId = 5,
                 Name = "test",
                 Surname = "testD",
                 //TrudBooks = new TrudBook() { TrudBookID = 5 }
@@ -74,7 +74,7 @@ namespace DAL.Tests
             context.SaveChanges();
 
             //Act
-            repository.Delete(employeer.EmployeeId);
+            repository.Delete(employeer.EmployeersId);
             uow.Save();
             var factEmployeerCount = context.employeers.Count();
 
@@ -92,7 +92,7 @@ namespace DAL.Tests
             Employeers expectedStreet = new Employeers()
             {
 
-                EmployeeId = 5,
+                EmployeersId = 5,
                 Name = "test",
                 Surname = "testD",
                 //TrudBooks = new TrudBook() { TrudBookID = 5 }
@@ -101,7 +101,7 @@ namespace DAL.Tests
             context.SaveChanges();
 
             //Act
-            var factEmployeers = repository.Get(expectedemployeers.EmployeeId);
+            var factEmployeers = repository.Get(expectedemployeers.EmployeersId);
 
             // Assert
             Assert.Equal(expectedStreet, factEmployeers);

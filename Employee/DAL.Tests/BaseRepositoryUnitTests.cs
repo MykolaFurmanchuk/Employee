@@ -68,16 +68,16 @@ namespace Catalog.DAL.Tests
             //IEmployeersRepository repository = uow.Employeerss;
             var repository = new TestEmployeersRepository(mockContext.Object);
 
-            Employeers expectedEmployeers = new Employeers() { EmployeeId = 1 };
-            mockDbSet.Setup(mock => mock.Find(expectedEmployeers.EmployeeId)).Returns(expectedEmployeers);
+            Employeers expectedEmployeers = new Employeers() { EmployeersId = 1 };
+            mockDbSet.Setup(mock => mock.Find(expectedEmployeers.EmployeersId)).Returns(expectedEmployeers);
 
             //Act
-            repository.Delete(expectedEmployeers.EmployeeId);
+            repository.Delete(expectedEmployeers.EmployeersId);
 
             // Assert
             mockDbSet.Verify(
                 dbSet => dbSet.Find(
-                    expectedEmployeers.EmployeeId
+                    expectedEmployeers.EmployeersId
                     ), Times.Once());
             mockDbSet.Verify(
                 dbSet => dbSet.Remove(
@@ -99,18 +99,18 @@ namespace Catalog.DAL.Tests
                         ))
                 .Returns(mockDbSet.Object);
 
-            Employeers expectedEmployeers = new Employeers() { EmployeeId = 1 };
-            mockDbSet.Setup(mock => mock.Find(expectedEmployeers.EmployeeId))
+            Employeers expectedEmployeers = new Employeers() { EmployeersId = 1 };
+            mockDbSet.Setup(mock => mock.Find(expectedEmployeers.EmployeersId))
                     .Returns(expectedEmployeers);
             var repository = new TestEmployeersRepository(mockContext.Object);
 
             //Act
-            var actualEmployeers = repository.Get(expectedEmployeers.EmployeeId);
+            var actualEmployeers = repository.Get(expectedEmployeers.EmployeersId);
 
             // Assert
             mockDbSet.Verify(
                 dbSet => dbSet.Find(
-                    expectedEmployeers.EmployeeId
+                    expectedEmployeers.EmployeersId
                     ), Times.Once());
             Assert.Equal(expectedEmployeers, actualEmployeers);
         }

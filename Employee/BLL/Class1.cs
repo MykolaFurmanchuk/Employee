@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace BLL
+﻿namespace BLL
 {
     public class Class1
     {
