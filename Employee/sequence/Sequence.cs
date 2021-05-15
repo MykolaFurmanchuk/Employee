@@ -7,12 +7,12 @@ namespace sequence
         static void Main(string[] args)
         {
             Archive archive = new Archive();
-            Reader reader = new Reader();
-            reader.SeeRecords(archive);
+            Accountant accountant = new Accountant();
+            accountant.SeeRecords(archive);
             Console.Read();
         }
     }
-    class Reader
+    class Accountant
     {
         public void SeeRecords(Archive archive)
         {
