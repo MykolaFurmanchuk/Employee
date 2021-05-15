@@ -27,6 +27,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lab12", "lab12", "{7A30D0FC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sequence", "sequence\sequence.csproj", "{DB2F6FCF-6831-4DD6-BE6B-8051C39DF464}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lab13", "lab13", "{C98F24A5-CFE6-47D8-B4FA-BD83C234E6EE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "behavioral", "behavioral\behavioral.csproj", "{51B2C180-A1E8-46D7-9148-70215C192F61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -65,6 +69,10 @@ Global
 		{DB2F6FCF-6831-4DD6-BE6B-8051C39DF464}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB2F6FCF-6831-4DD6-BE6B-8051C39DF464}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB2F6FCF-6831-4DD6-BE6B-8051C39DF464}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51B2C180-A1E8-46D7-9148-70215C192F61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51B2C180-A1E8-46D7-9148-70215C192F61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51B2C180-A1E8-46D7-9148-70215C192F61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51B2C180-A1E8-46D7-9148-70215C192F61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -78,6 +86,7 @@ Global
 		{7417B133-E4CF-48B2-9CC6-E7869EABC906} = {1C08547C-B4A5-4B01-A550-4A52AC9B288A}
 		{350A2771-439F-46E1-9881-D1DE8D0B4ACC} = {460830A3-2E76-424F-A0FD-9826F9CCA7E3}
 		{DB2F6FCF-6831-4DD6-BE6B-8051C39DF464} = {7A30D0FC-7CB6-4E94-A762-7AFA79F12869}
+		{51B2C180-A1E8-46D7-9148-70215C192F61} = {C98F24A5-CFE6-47D8-B4FA-BD83C234E6EE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {92F33F3B-7E6B-457F-8655-E8E085FD5F0F}
